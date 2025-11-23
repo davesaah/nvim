@@ -1,6 +1,7 @@
 vim.lsp.config['ocamllsp'] = {
   cmd = { 'ocamllsp' },
   filetypes = {
+    'ml',
     'ocaml',
     'ocaml.interface',
     'ocaml.menhir',
