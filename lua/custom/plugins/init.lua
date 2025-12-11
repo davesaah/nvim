@@ -22,21 +22,10 @@ return {
     event = 'VeryLazy',
   },
 
-  -- -- flutter
-  -- {
-  --   'nvim-flutter/flutter-tools.nvim',
-  --   lazy = false,
-  --   dependencies = {
-  --     'nvim-lua/plenary.nvim',
-  --     'stevearc/dressing.nvim', -- optional for vim.ui.select
-  --   },
-  --   config = true,
-  -- },
-  --
-  -- -- haskell
-  -- {
-  --   'mrcjkb/haskell-tools.nvim',
-  --   version = '^4', -- Recommended
-  --   lazy = false, -- This plugin is already lazy
-  -- },
+  -- haskell
+  {
+    'mrcjkb/haskell-tools.nvim',
+    version = '^6', -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
 }
