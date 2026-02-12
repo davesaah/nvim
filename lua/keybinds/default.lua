@@ -10,7 +10,7 @@ assign('n', '[c', function()
   require('treesitter-context').go_to_context()
 end, { silent = true })
 
-assign('n', '<F5>', function()
+assign('n', '<leader>q', function()
   run 'UndotreeToggle'
   run 'UndotreeFocus'
 end, { silent = true })

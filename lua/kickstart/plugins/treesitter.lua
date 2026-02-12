@@ -8,7 +8,7 @@ return {
 
   config = function()
     ---@diagnostic disable-next-line: missing-fields
-    require('nvim-treesitter.configs').setup {
+    require'nvim-treesitter'.setup {
       ensure_installed = {
         'bash',
         'go',
@@ -17,9 +17,13 @@ return {
         'markdown',
         'vim',
         'vimdoc',
-        'haskell',
         'json',
         'yaml',
+        'python',
+        'ocaml',
+        'c',
+        'cpp',
+        'rust',
       },
 
       -- Autoinstall languages that are not installed
