@@ -20,5 +20,10 @@ return {
   {
     'nvim-treesitter/nvim-treesitter-context',
     event = 'VeryLazy',
-  }
+  },
+
+  {
+    'johnfrankmorgan/whitespace.nvim',
+    event = 'VeryLazy',
+  },
 }

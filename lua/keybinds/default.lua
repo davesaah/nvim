@@ -35,3 +35,5 @@ assign('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Lazy Manager' })
 
 -- mason
 assign('n', '<leader>cm', '<cmd>Mason<CR>', { desc = 'Mason Manager' })
+
+assign('n', '<Leader>t', require('whitespace-nvim').trim, { desc = 'Remove trailing whitespaces' })
