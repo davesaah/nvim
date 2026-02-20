@@ -1,19 +1,13 @@
 local assign = vim.keymap.set
-local run = vim.cmd
 
 assign('n', '<Esc>', '<cmd>nohlsearch<CR>')
 assign('n', '<C-s>', '<cmd>:w<CR>')
 assign('v', '<C-s>', '<ESC><cmd>:w<CR>')
 assign('i', '<C-s>', '<ESC><cmd>:w<CR>')
 
-assign('n', '[c', function()
-  require('treesitter-context').go_to_context()
-end, { silent = true })
+assign('n', '[c', require('treesitter-context').go_to_context)
 
-assign('n', '<leader>q', function()
-  run 'UndotreeToggle'
-  run 'UndotreeFocus'
-end, { silent = true })
+assign('n', '<leader>q', '<cmd>UndotreeToggle<CR>UndotreeFocus<CR>', { desc = 'Toggle undotree' })
 
 -- Diagnostic keymaps
 assign('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
