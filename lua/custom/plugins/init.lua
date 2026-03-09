@@ -26,4 +26,10 @@ return {
     'johnfrankmorgan/whitespace.nvim',
     event = 'VeryLazy',
   },
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    event = 'VeryLazy',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+  },
 }

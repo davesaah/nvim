@@ -31,3 +31,38 @@ assign('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Lazy Manager' })
 assign('n', '<leader>cm', '<cmd>Mason<CR>', { desc = 'Mason Manager' })
 
 assign('n', '<Leader>t', require('whitespace-nvim').trim, { desc = 'Remove trailing whitespaces' })
+
+-- harpoon
+local harpoon = require 'harpoon'
+
+-- REQUIRED
+harpoon:setup()
+-- REQUIRED
+
+assign('n', '<leader>a', function()
+  harpoon:list():add()
+end, { desc = 'Add to harpoon' })
+assign('n', '<C-e>', function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
+
+assign('n', '<C-h>', function()
+  harpoon:list():select(1)
+end)
+assign('n', '<C-j>', function()
+  harpoon:list():select(2)
+end)
+assign('n', '<C-k>', function()
+  harpoon:list():select(3)
+end)
+assign('n', '<C-l>', function()
+  harpoon:list():select(4)
+end)
+
+-- Toggle previous & next buffers stored within Harpoon list
+assign('n', '<C-S-P>', function()
+  harpoon:list():prev()
+end)
+assign('n', '<C-S-N>', function()
+  harpoon:list():next()
+end)
